@@ -1,15 +1,10 @@
 package com.example.spring_h2_database.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
 
 @Entity
 @Data
@@ -20,12 +15,21 @@ import lombok.NoArgsConstructor;
 public class Department {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long departmentId;
-    @NotBlank(message = "Please Add Name")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long departmentId;
+
+    @Column(name = "department_name")
     private String departmentName;
+
+    @Column(name = "department_code")
     private String departmentCode;
+
+    @Column(name = "department_address")
     private String departmentAddress;
+
+
+
+//
 //    public long getDepartmentId() {
 //        return departmentId;
 //    }
@@ -77,6 +81,6 @@ public class Department {
 //    public void setDepartmentAddress(String departmentAddress) {
 //        this.departmentAddress = departmentAddress;
 //    }
-//
+
 
 }
