@@ -80,6 +80,11 @@ public class Department {
 //
 //    public void setDepartmentAddress(String departmentAddress) {
 //        this.departmentAddress = departmentAddress;
+//    
+//    }
+//
+//    public void setDepartmentAddresscode() {
+//
 //    }
 
 
